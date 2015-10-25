@@ -58,6 +58,14 @@
   height: 30;
 }
 
+.checked {
+	color: #FF25c73a;
+}
+
+.unchecked {
+	color: #FF737373;
+}
+
 .todo-row {
   padding: 10;
   background-color: #fff;

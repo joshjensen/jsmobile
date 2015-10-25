@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo">
   <DockLayout stretchLastChild="true">
-    <StackLayout dock="top" text="fill" id="wrapper">
+    <StackLayout dock="top" id="wrapper">
       <StackLayout>
         <Label text="Todo" id="header" horizontalAlignment="stretch" />
         <Label text="" id="backButton" cssClass="fa" horizontalAlignment="left" visibility="{{ showBack ? 'visible' : 'collapsed' }}" tap="onBackTap" />
@@ -13,7 +13,7 @@
     <ListView items="{{ todoItems }}" id="listView" itemTap="rowOnPress" separatorColor="#fff">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal" cssClass="todo-row">
-                <Label text="{{ isChecked ? '' : '' }}" color="{{ iconColor }}" tap="onPressCheckbox" cssClass="fa checkbox"  />
+                <Label text="{{ isChecked ? '' : '' }}" tap="onPressCheckbox" cssClass="{{ isChecked ? 'fa checkbox checked' : 'fa checkbox unchecked' }}"  />
                 <Label text="{{ text }}" />
             </StackLayout>
         </ListView.itemTemplate>
